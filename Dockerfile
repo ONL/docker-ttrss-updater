@@ -1,5 +1,7 @@
 FROM php:cli-alpine
 
+RUN apk add icu-dev
+
 RUN docker-php-ext-install opcache intl gd pgsql pdo pdo_pgsql
 RUN docker-php-ext-enable opcache intl gd pgsql pdo pdo_pgsql
 
