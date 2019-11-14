@@ -12,7 +12,8 @@ WORKDIR /usr/src/ttrss
 RUN curl -o ttrss.tar.gz https://git.tt-rss.org/fox/tt-rss/archive/19.2.tar.gz \
 	&& tar --strip-components=1 -xzf ttrss.tar.gz \
 	&& rm -f ttrss.tar.gz \
-	&& chown -R 9004:9004 /usr/src/ttrss
+	&& chown -R 9004:9004 /usr/src/ttrss \
+	&& ln -s /usr/local/bin/php /usr/bin/php
 
 USER 9004:9004
 
