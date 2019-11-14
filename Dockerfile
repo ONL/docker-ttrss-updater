@@ -2,8 +2,8 @@ FROM php:cli-alpine
 
 RUN apk add icu-dev libpng-dev postgresql-dev
 
-RUN docker-php-ext-install opcache intl gd pgsql pdo pdo_pgsql
-RUN docker-php-ext-enable opcache intl gd pgsql pdo pdo_pgsql
+RUN docker-php-ext-install opcache intl gd pgsql pdo pdo_pgsql pcntl
+RUN docker-php-ext-enable opcache intl gd pgsql pdo pdo_pgsql pcntl
 
 ADD config/opcache.ini $PHP_INI_DIR/conf.d/
 
