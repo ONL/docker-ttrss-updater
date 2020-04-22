@@ -9,7 +9,7 @@ ADD config/opcache.ini $PHP_INI_DIR/conf.d/
 
 WORKDIR /usr/src/ttrss
 
-RUN curl -o ttrss.tar.gz https://git.tt-rss.org/fox/tt-rss/archive/1.15.3.tar.gz \
+RUN curl -o ttrss.tar.gz https://git.tt-rss.org/fox/tt-rss/archive/master.tar.gz \
 	&& tar --strip-components=1 -xzf ttrss.tar.gz \
 	&& rm -f ttrss.tar.gz \
 	&& chown -R 9004:9004 /usr/src/ttrss \
